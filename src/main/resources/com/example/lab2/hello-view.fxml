@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="472.0" prefWidth="475.0" spacing="20.0" style="-fx-background-color: #111122;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab2.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <TabPane prefHeight="432.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Вариант 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="450.0" AnchorPane.topAnchor="280.0">
+                           <children>
+                              <VBox prefHeight="100.0" prefWidth="264.0">
+                                 <children>
+                                    <Label textFill="WHITE" fx:id="x_res">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="15.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label fx:id="y_res" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Button fx:id="btn_reset" mnemonicParsing="false" prefHeight="31.0" prefWidth="129.0" text="Сброс">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="23.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="450.0" AnchorPane.topAnchor="213.0">
+                           <children>
+                              <VBox prefHeight="100.0" prefWidth="260.0">
+                                 <children>
+                                    <Label text="X = arctg(a+b) + ctg(a-b)" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="15.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label text="Y = sin^2(a^3) + cos^2(b) + sin(X^2)" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox prefHeight="100.0" prefWidth="174.0">
+                                 <children>
+                                    <Button fx:id="btn_res" mnemonicParsing="false" prefHeight="44.0" prefWidth="174.0" text="Рассчитать">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Label alignment="TOP_CENTER" prefHeight="25.0" prefWidth="435.0" text="1.1 Программирование формул (4)" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="5.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="435.0" AnchorPane.topAnchor="50.0">
+                           <children>
+                              <VBox prefHeight="100.0" prefWidth="148.0">
+                                 <children>
+                                    <Label text="Введите значение a:" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" top="2.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label text="Введите значение b:" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="100.0" prefWidth="111.0">
+                                 <children>
+                                    <TextField fx:id="input_a">
+                                       <VBox.margin>
+                                          <Insets bottom="14.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="input_b">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <Label fx:id="war_1" alignment="CENTER" prefHeight="20.0" prefWidth="132.0" text="Заполните все поля!" textFill="WHITE" visible="false">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="15.0" top="49.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Вариант 2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="TOP_CENTER" prefHeight="25.0" prefWidth="435.0" text="2.1 Программирование формул (5)" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="5.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="435.0" AnchorPane.topAnchor="50.0">
+                           <children>
+                              <VBox prefHeight="100.0" prefWidth="148.0">
+                                 <children>
+                                    <Label text="Введите значение a:" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" top="2.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label text="Введите значение b:" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="100.0" prefWidth="111.0">
+                                 <children>
+                                    <TextField fx:id="input_a1">
+                                       <VBox.margin>
+                                          <Insets bottom="14.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="input_b1">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <Label fx:id="war_2" alignment="CENTER" prefHeight="20.0" prefWidth="132.0" text="Заполните все поля!" textFill="WHITE" visible="false">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="15.0" top="49.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="120.0" prefWidth="435.0" AnchorPane.topAnchor="150.0">
+                           <children>
+                              <VBox prefHeight="100.0" prefWidth="260.0">
+                                 <children>
+                                    <Label text="Y = f(x) - ?" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="15.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label text="1) Y = sin |k * x|, если k = 1" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="2) Y = cos |k * x|, если k = 2" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="3) Y = sqrt(|k * (x)^2 + 1|), если k = 3" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4) Y = k * (x)^2, если k &gt; 3" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="100.0" prefWidth="174.0">
+                                 <children>
+                                    <Button fx:id="btn_res2" mnemonicParsing="false" prefHeight="44.0" prefWidth="174.0" text="Рассчитать">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="73.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="435.0" AnchorPane.topAnchor="280.0">
+                           <children>
+                              <VBox prefHeight="100.0" prefWidth="264.0">
+                                 <children>
+                                    <Label textFill="WHITE" fx:id="x_res2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="25.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Button fx:id="btn_reset2" mnemonicParsing="false" prefHeight="31.0" prefWidth="129.0" text="Сброс">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="23.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Вариант 3">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="435.0" AnchorPane.topAnchor="50.0">
+                           <children>
+                              <VBox prefHeight="100.0" prefWidth="135.0">
+                                 <children>
+                                    <Label text="Введите значение A:" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" top="2.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label text="Введите значение B:" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label text="Введите значение X:" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="86.0" prefWidth="69.0">
+                                 <children>
+                                    <TextField fx:id="input_a3">
+                                       <VBox.margin>
+                                          <Insets bottom="14.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="input_b3">
+                                       <VBox.margin>
+                                          <Insets bottom="14.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="input_x">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox prefHeight="100.0" prefWidth="140.0">
+                                 <children>
+                                    <Label prefHeight="20.0" prefWidth="139.0" text="Введите значение N:" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" top="2.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label text="Введите значение M:" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="war_3" alignment="CENTER" prefHeight="20.0" prefWidth="132.0" text="Заполните все поля!" textFill="WHITE" visible="false">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="25.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox prefHeight="86.0" prefWidth="69.0">
+                                 <children>
+                                    <TextField fx:id="input_n" prefHeight="27.0" prefWidth="67.0">
+                                       <VBox.margin>
+                                          <Insets bottom="14.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="input_m" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="435.0" text="3.1 Арифметический цикл (5)" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="5.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="68.0" prefWidth="435.0" AnchorPane.topAnchor="211.0">
+                           <children>
+                              <ImageView fitHeight="90.0" fitWidth="227.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@formula_3.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <VBox prefHeight="100.0" prefWidth="174.0">
+                                 <children>
+                                    <Button fx:id="btn_res3" mnemonicParsing="false" prefHeight="44.0" prefWidth="174.0" text="Рассчитать">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="12.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="33.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox minWidth="-Infinity" prefHeight="100.0" prefWidth="435.0" AnchorPane.topAnchor="280.0">
+                           <children>
+                              <VBox prefHeight="100.0" prefWidth="264.0">
+                                 <children>
+                                    <Label fx:id="s_res" prefHeight="21.0" prefWidth="266.0" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="2.0" top="30.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Button fx:id="btn_reset3" mnemonicParsing="false" prefHeight="31.0" prefWidth="129.0" text="Сброс">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="23.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>
